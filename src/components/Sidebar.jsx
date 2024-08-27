@@ -101,12 +101,7 @@ function Sidebar() {
             support
           </div>
         </Nav.Link>
-        <Nav.Link
-          as={Link}
-          to="/"
-          className="text-white"
-          style={{ fontSize: "12px", marginTop: "150px" }}
-        >
+        <Nav.Link as={Link} to="/" className="text-white mt-5">
           <div className="text-white text-uppercase">
             <Icon.RocketTakeoff className="me-2" size={18} /> upgrade to pro
           </div>

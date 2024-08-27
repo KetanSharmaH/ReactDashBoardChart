@@ -58,20 +58,6 @@ function App() {
 }
 
 function MainDashboard() {
-  const data = {
-    labels: ["22:14", "22:34", "22:54", "23:14", "23:34", "23:54", "00:14"],
-    height: 50,
-    datasets: [
-      {
-        label: "Internet Speed (Mbps)",
-        data: [30, 50, 40, 60, 50, 70, 60],
-        fill: false,
-        backgroundColor: "rgba(75,192,192,0.6)",
-        borderColor: "rgba(75,192,192,1)",
-      },
-    ],
-  };
-
   return (
     <>
       <Row>
@@ -79,6 +65,7 @@ function MainDashboard() {
           <Chart
             title="Internet Sensor Graph"
             data={internetSensorData}
+            datasetLabel="Internet Speed (Mbps)"
             icon={<Icon.Send className="me-2 text-success" />}
           />
         </Col>
@@ -86,6 +73,7 @@ function MainDashboard() {
           <Chart
             title="Motion Graph Sensor"
             data={motionSensorData}
+            datasetLabel="Velocity (M/S)"
             icon={<Icon.Bell className="me-2 text-primary" />}
           />
         </Col>
@@ -93,6 +81,7 @@ function MainDashboard() {
           <Chart
             title="Latency Sensor Graph"
             data={latencySensorData}
+            datasetLabel="Temperature (C)"
             icon={<Icon.Send className="me-2 text-success" />}
           />
         </Col>
@@ -101,6 +90,7 @@ function MainDashboard() {
           <Chart
             title="Battery Graph Sensor"
             data={batterySensorData}
+            datasetLabel="Voltage (V)"
             icon={<Icon.Send className="me-2 text-success" />}
           />
         </Col>
